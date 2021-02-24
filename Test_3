@@ -1,0 +1,24 @@
+var r, g,t,b;
+var t = 0;
+
+function setup() {
+  createCanvas(1000, 1000);
+  background(1000);
+}
+
+
+
+function draw() {
+  
+  r = random(0,250);
+  g = random(0,250);
+  b = random(0,250);
+  
+  stroke(0);
+  if (mouseIsPressed === true) {
+    fill(r,g,b)
+    ellipse(pmouseX, pmouseY, sin(t/50)*50, sin(t/50)*50);
+    t = t + 1;
+  }
+}
+
