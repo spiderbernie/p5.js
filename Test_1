@@ -1,0 +1,34 @@
+var x, r, y, s;
+side = 400;
+
+function setup() {
+  createCanvas(side, side);
+  
+    noStroke();
+  background('black')
+  y = 0;
+}
+
+var x = 10;
+
+function draw() {
+  
+  x = random(0,400)
+  
+  r = random(5,10);
+  
+  s = random(-50,50);
+   
+
+  rect(abs(cos(y)*400)+s, y+s, r, r);
+  rect(abs(sin(y)*400)+s, y+s, r, r);
+  rect( y+s,abs(sin(y)*400)+s, r, r);
+  rect( y+s,abs(cos(y)*400)+s, r, r);
+  
+  y = y + 5;
+  
+  if(y > 400) {
+    y = 0;
+  }
+}
+  
