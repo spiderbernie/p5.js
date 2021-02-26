@@ -1,0 +1,64 @@
+//Estudio de movimiento
+
+function setup() {
+  createCanvas(720, 400);
+  stroke(255);
+  frameRate(30);
+}
+
+var y = 0;
+var x = 0;
+var w = 0;
+var z = 0;
+
+function draw() {
+  background(255);
+  stroke(0);
+  
+  {y = y + 1;
+  if (y > height) {
+    y = 0;
+  }
+  {let i = 0;
+  for(i=0;i < height; i += 20) {
+    line(0, y+i, width, y+i);
+    line(0, y-i, width, y-i);
+    }
+  }
+  }
+  
+    w = w - 1;
+  if (w < 0) {
+    w = height;
+  }
+    {let i = 0;
+  for(i=0;i < height; i += 20) {
+    line(0, w+i, width, w+i);
+    line(0, w-i, width, w-i);
+    }
+  }
+    
+    x = x + 1;
+  if (x > width) {
+    x = 0;
+  }
+  {let i = 0;
+  for(i=0;i < width; i += 20) {
+    line(x+i, 0, x+i, height);
+    line(x-i, 0, x-i, height);
+    }
+  }
+  
+      z = z - 1;
+  if (z < 0) {
+    z = width;
+  }
+  {let i = 0;
+  for(i=0;i < width; i += 20) {
+    line(z+i, 0, z+i, height);
+    line(z-i, 0, z-i, height);
+    }
+  }
+
+
+}
