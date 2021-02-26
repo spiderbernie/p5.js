@@ -1,0 +1,22 @@
+//Estudio de width y height con "for loops"
+
+function setup() {
+  createCanvas(400, 200);
+}
+
+function draw() {
+  background(0);
+  noStroke();
+  
+  {let i = 0; 
+    for (i = 0; i < width; i += 20) {
+      rect(i, 0, 5, height);
+    }
+  }
+  
+  {let i = 0;
+    for (i = 0; i < height; i += 20) {
+      rect(0, i, width, 5);
+    }
+  }
+}
