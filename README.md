@@ -1,4 +1,4 @@
-# p5j.s
+# p5.js
 Learning p5.js 
 
 
