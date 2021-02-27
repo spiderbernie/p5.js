@@ -1,0 +1,30 @@
+
+
+
+function setup() {
+  createCanvas(720, 400);
+  stroke(255);
+  frameRate(30);
+}
+
+var t = 0;
+
+
+function draw() {
+
+  stroke(0);
+  
+  {t = t + 1;
+  }
+  
+  {if (t > height)
+  t = 0;
+    {let i = 0;
+    for(i=0;i < height; i += 2) {
+      fill(i*1000, i*10, i)
+      rect(t*i-i, 0, t*i-i);
+
+      }
+    }
+  }
+}
