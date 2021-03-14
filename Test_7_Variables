@@ -8,22 +8,29 @@ function setup() {
   let a = 50;
   let b = 120;
   let c = 180;
+  var y = a+3*c;
   
-var y = 2*(a+c);
-for(a; a<y; a=a+c) {
-  if(a==a+c) {
+  for(a; a<y; a=a+c) {
+    if(a<=y/3) {
+      let z = 2*b;
       let x = 10;
-  let i;
-    for(i=0; i<(4*x); i += x)
-  
-  line(a,height-b+i,a+c,height-b+i);
+      let i;
+      for(i=0; i<(4*x); i += x)  
+        line(a,z-b+i,a+c,z-b+i);
+      
+    } else if (a>=y/2) {
+      let z = 2*b;
+      let x = 10;
+      let i;
+      for(i=0; i<(4*x); i += x)  
+        line(a,z-b+i,a+c,z-b+i);
+    
+    } else {
+        let z = height;    
+        let x = 10;
+        let i;
+        for(i=0; i<(4*x); i += x)
+          line(a,z-b+i,a+c,z-b+i);
+    }
   }
-  else {
-  let x = 10;
-  let i;
-    for(i=0; i<(4*x); i += x)
-  
-  line(a,b+i,a+c,b+i);
-}
-}
 }
